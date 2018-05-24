@@ -188,14 +188,6 @@ body {
 .video-icon:hover {
   opacity: 0.8;
 }
-a {
-  color: #fff;
-  -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  -ms-transition: 0.2s ease-out;
-  -o-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens - adaptive styles bofore 1200px */
 /* Medium Devices, Desktops - adaptive styles bofore 992px */
@@ -302,18 +294,61 @@ a {
   list-style-type: none;
   margin: 0;
 }
-.navigation_element {
+ul, li{ 
+  list-style: none; 
+  padding:0px; 
+  margin:0px; 
+}
+.navigation_element { 
+  display:inline-block; 
+  position: relative;
   margin-right: 22px;
   margin-left: 22px;
-  font-size: 18px;
-}
+  font-size: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
+} 
+.navigation_link { 
+  padding:10px; 
+  display:block; 
+  text-decoration: none; 
+  text-transform: uppercase; 
+  color:#eae1e1; 
+  position:relative; 
+} 
+.navigation_link:after{ 
+  content:''; 
+  width:0%; 
+  transition:all 0.5s ease; 
+  left:49%; 
+} 
 
-.navigation_element a {
-  color: #fff;
+.navigation_link:before{ 
+  content:''; 
+  width:0%; 
+  transition:all 0.5s ease; 
+  left:49%; 
+} 
+.navigation_link:hover {
   text-decoration: none;
 }
-.navigation_element a:hover {
-  text-decoration: underline;
+.navigation_link:hover:after{ 
+  content:''; 
+  position:absolute; 
+  bottom:0px; 
+  left:49%; 
+  background:#3e51b5; 
+  height:3px; 
+  width:49%; 
+} 
+.navigation_link:hover:before{ 
+  content:''; 
+  position:absolute; 
+  bottom:0px; 
+  left:0px; 
+  background:#3e51b5; 
+  height:3px; 
+  width:49%;
 }
 .logo-wrapper {
   padding-top: 35px;
@@ -321,9 +356,16 @@ a {
   border-bottom: 1px solid #f4f4f4;
 }
 .logo-container {
+
+}
+.logo-container__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.logo-item {
+  text-align: center;
+  padding: 10px;
 }
 .logo-img {
   opacity: 0.5;
@@ -331,10 +373,7 @@ a {
 .col-md-3 {
   padding-bottom: 30px;
 }
-.logo-item {
-  text-align: center;
-  padding: 10px;
-}
+
 /*-----------------------
 
 	section-mac
