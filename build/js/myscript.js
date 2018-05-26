@@ -30,25 +30,20 @@ $(document).ready(function() {
 
 
 	/* toggle nav */
-		$(".menu-icon").on("click", function(){
-			$(this).after(
-				'<div class="drop-menu--bg">' +
-				'<div class="drop-menu--close"></div>' +
-				'<div class="drop-menu">' + 
-				'<a href="#photo" class="scrollto drop-menu__items">PHOTO SHOWCASE</a>' +
-				'<a href="#general" class="scrollto drop-menu__items">GENERAL FEATURES</a>' +
-				'<a href="#showcase" class="scrollto drop-menu__items">SHOWCASE</a>' +
-				'<a href="#best" class="scrollto drop-menu__items">BEST PRODUCT</a>' +
-				'</div>' +
-				'<div>'
-				);
+
+			$('.button-menu').click( function(){ // лoвим клик пo крестику или пoдлoжке
+				$('.drop-menu--bg').addClass('drop-menu--bg--visible');
+			});
+
 			$(".drop-menu__items").on("click", function(){
-				$(".drop-menu--bg").fadeOut();
+				$(".drop-menu--bg").removeClass('drop-menu--bg--visible');
 			});
+
 			$(".drop-menu--close").on("click", function(){
-				$(".drop-menu--bg").fadeOut();
+				$(".drop-menu--bg").removeClass('drop-menu--bg--visible');
 			});
-		});   
+
+
 	widthWindow = $(window).width();
 	if(widthWindow <= 620) {
 		$('#open-video-modal').removeClass('open-video-modal').addClass('open-video-modal--mobile');
