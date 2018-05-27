@@ -5,18 +5,13 @@
 	.button-menu {
 		display: block;
 		padding: 10px 15px 10px 20px;
+		border: none;
+		border-right: 1px solid #3e51b5;
 	}
 	.button-profile--mobile {
 		padding: 10px 15px;
+		border-left: 1px solid #3e51b5;
 	}
-	.buttons:before {
-		content: "";
-		height: 100%;
-		position: absolute;
-		border-left: 2px solid #3e51b5;
-		left: 50%;
-		top: 0;
-}
 	.button-profile__link:hover,
 	.button-profile__link:focus {
 	  color: #fff;
@@ -123,5 +118,12 @@
 	.share-button {
 		display: none;
 		
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.intro-text-3 {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
