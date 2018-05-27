@@ -303,24 +303,23 @@ ul, li{
   color:#eae1e1; 
   position:relative;
 }
-.navigation_link:after{ 
-  content:''; 
-  width:0%; 
-  transition: all 0.5s ease;
-  left:49%; 
-} 
-.navigation_link:before{ 
-  content:''; 
-  width:0%; 
-  transition: all 0.5s ease;
-  left:49%; 
-} 
 .navigation_link:hover {
   text-decoration: none;
-  color: #eae1e1;
-  transition: all 0.5s ease;
+  color: #FFF;
 }
-.navigation_link:hover:after{ 
+.navigation_element:after{ 
+  content:''; 
+  width:0%; 
+  transition: all 0.5s ease;
+  left:49%; 
+} 
+.navigation_element:before{ 
+  content:''; 
+  width:0%; 
+  transition: all 0.5s ease;
+  left:49%; 
+} 
+.navigation_element:hover:after{ 
   content:''; 
   position:absolute; 
   bottom:0; 
@@ -329,7 +328,7 @@ ul, li{
   height:3px; 
   width:49%; 
 } 
-.navigation_link:hover:before{ 
+.navigation_element:hover:before{ 
   content:''; 
   position: absolute; 
   bottom:0; 
