@@ -472,6 +472,10 @@ ul, li{
   font-size: 19px;
   letter-spacing: -1px;
 }
+.card__img img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
 .benefit-footer {
   width: 100%;
   height: auto;
@@ -499,4 +503,7 @@ ul, li{
 .drop-menu--bg {
     visibility: hidden;
     opacity: 0;
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
